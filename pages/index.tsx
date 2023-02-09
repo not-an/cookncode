@@ -19,12 +19,12 @@ const IndexPage: NextPage<PostDataListProps> = ({
   postDataList,
 }: PostDataListProps) => {
   return (
-    <main>
+    <main className='flex flex-col'>
       <Head>
         <title>Home page</title>
       </Head>
 
-      <h1>List of posts</h1>
+      <h1 className='mx-2'>List of posts</h1>
 
       <section>
         {postDataList.map((post: PostData) => (

@@ -5,7 +5,7 @@ export default function Post({ Title, Body, _id }: PostData) {
   return (
     <article>
       <h2>{Title}</h2>
-      <p dangerouslySetInnerHTML={{ __html: Body }}></p>
+      <div dangerouslySetInnerHTML={{ __html: Body }}></div>
       <Link href={`/post/${_id}`}>Read more...</Link>
     </article>
   )

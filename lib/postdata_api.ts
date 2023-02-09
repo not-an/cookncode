@@ -23,6 +23,5 @@ export async function GetPosts(): Promise<PostData[]> {
     }
   )
   const postList: PostData[] = (await response.json()) as PostData[];
-  console.log(postList);
   return postList
 }

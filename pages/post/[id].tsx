@@ -3,8 +3,8 @@ import Head from 'next/head'
 import React from 'react'
 import { GetStaticProps, GetStaticPaths, NextPage } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import { PostData, PostDataProps } from '../../types/postdata'
-import { GetPosts, GetPost } from '../../lib/postdata_api'
+import { PostData, PostDataProps } from '../../src/types/postdata'
+import { GetPosts, GetPost } from '../../../lib/postdata_api'
 
 interface Params extends ParsedUrlQuery {
   id: string
