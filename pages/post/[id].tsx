@@ -3,8 +3,8 @@ import Head from 'next/head'
 import React from 'react'
 import { GetStaticProps, GetStaticPaths, NextPage } from 'next'
 import { ParsedUrlQuery } from 'querystring'
-import { PostData, PostDataProps } from '../../src/types/postdata'
-import { GetPosts, GetPost } from '../../../lib/postdata_api'
+import { PostData, PostDataProps } from '../../types/postdata'
+import { GetPosts, GetPost } from '../../lib/postdata_api'
 
 interface Params extends ParsedUrlQuery {
   id: string
@@ -45,7 +45,7 @@ const Post: NextPage<PostDataProps> = ({ postData }: PostDataProps) => {
 
       <h1>{postData.Title}</h1>
 
-      <p dangerouslySetInnerHTML={{ __html: postData.Body }}></p>
+      <div dangerouslySetInnerHTML={{ __html: postData.Body }}></div>
 
       <Link href="/">Go back to home</Link>
     </main>
